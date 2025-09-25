@@ -1,4 +1,4 @@
-# Predicting Stock Prices — Data Analysis (Python)
+# Predicting Stock Prices — Data Analysis
 
 A practical starter for end‑to‑end **stock price prediction** and evaluation. Fetch data with **yfinance**, engineer **technical indicators**, train models (from **naive baselines** to **RandomForest**), and evaluate using **time‑series walk‑forward**. Includes plotting helpers and a single CLI.
 

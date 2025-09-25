@@ -1,4 +1,4 @@
-# Recommendation Systems — Data Analysis Toolkit (Python)
+# Recommendation Systems — Data Analysis Toolkit
 
 A compact, practical collection of classic recommendation algorithms with a consistent API, evaluation helpers, and a CLI. Bring your own interactions (ratings or implicit feedback) and get top-N recommendations plus metrics like Precision@K, Recall@K, MAP, and NDCG.
 

@@ -1,4 +1,4 @@
-# Reddit Bot (Python + PRAW)
+# Reddit Bot (PRAW)
 
 A lightweight Reddit bot using **PRAW** that can **watch subreddits**, **reply on keyword hits**, and **process mentions**. It keeps a small SQLite database to avoid double-posting and supports **dry‑run** mode to preview actions.
 

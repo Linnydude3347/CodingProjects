@@ -1,4 +1,4 @@
-# Twitter (X) Data Mining — Python
+# Twitter (X) Data Mining
 
 A compact toolkit to collect recent tweets via the official Twitter (X) v2 API using Tweepy, then save to JSONL/CSV/SQLite and run quick word-frequency analysis.
 

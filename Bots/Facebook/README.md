@@ -1,4 +1,4 @@
-# Facebook Messenger Bot (Python + Flask)
+# Facebook Messenger Bot (Flask)
 
 A minimal, production‑ready **Messenger bot** server in Python. It verifies the webhook, receives messages/events, and replies via the **Meta Graph API**. Includes signature verification and Docker support.
 

@@ -1,4 +1,4 @@
-# Scrape with Python + Selenium WebDriver
+# Scrape with Selenium WebDriver
 
 A minimal toolkit to scrape web pages using **Selenium 4** with Chrome or Firefox, powered by `webdriver-manager` (no manual driver installs). Includes a demo scraper for `quotes.toscrape.com`, CLI, and CSV/JSONL output.
 

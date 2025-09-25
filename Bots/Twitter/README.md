@@ -1,4 +1,4 @@
-# Twitter (X) Bot — Python + Tweepy (v2)
+# Twitter (X) Bot — Tweepy (v2)
 
 A simple but sturdy **Twitter/X bot** using **Tweepy** and the **v2 API**. It can **tweet**, **poll mentions** and reply on keyword hits, and (optionally) search and reply. It keeps a small SQLite state to avoid repeats and supports **dry‑run** mode for safe testing.
 

@@ -1,4 +1,4 @@
-# Genetic Algorithms — Data Analysis Toolkit (Python)
+# Genetic Algorithms — Data Analysis Toolkit
 
 A clean, extensible **Genetic Algorithms** starter with multiple encodings (real, binary, integer, permutation), pluggable operators, classic benchmarks, and a simple CLI.
 

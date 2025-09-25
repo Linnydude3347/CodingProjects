@@ -1,4 +1,4 @@
-# Twitter (X) Sentiment Analysis — Python Data Science
+# Twitter (X) Sentiment Analysis
 
 A compact pipeline to collect tweets (via the official v2 API), clean text, run sentiment analysis (VADER or an optional Transformer), and generate quick visual reports.
 
