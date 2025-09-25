@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="card">
+  <h1>Todo List</h1>
+  <form method="post" action="{{ url_for('add') }}" class="add-form">
+    <input type="text" name="title" placeholder="What needs to be done?" minlength="1" maxlength="200" required>
+    <button type="submit">Add</button>
+  </form>
+  <div class="filters">
+    <a class="{{ 'active' if filter_by=='all' else '' }}" href="{{ url_for('index', filter='all') }}">All ({{ counts.all }})</a>
+    <a class="{{ 'active' if filter_by=='active' else '' }}" href="{{ url_for('index', filter='active') }}">Active ({{ counts.active }})</a>
+    <a class="{{ 'active' if filter_by=='completed' else '' }}" href="{{ url_for('index', filter='completed') }}">Completed ({{ counts.completed }})</a>
+    <form method="post" action="{{ url_for('clear_completed') }}" style="display:inline">
+      <button class="danger" type="submit" {% if counts.completed==0 %}disabled{% endif %}>Clear completed</button>
+    </form>
+  </div>
+</section>
+
+{% for t in todos %}
+  <article class="todo">
+    <form method="post" action="{{ url_for('toggle', todo_id=t.id, filter=filter_by) }}">
+      <button class="chk {{ 'done' if t.completed else '' }}" title="Toggle complete" type="submit">
+        {% if t.completed %}✓{% else %}&nbsp;{% endif %}
+      </button>
+    </form>
+    <div class="content">
+      <div class="title {% if t.completed %}completed{% endif %}">{{ t.title }}</div>
+      <div class="meta">Created {{ t.created_at|fmt_dt }}{% if t.updated_at and t.updated_at != t.created_at %} · Updated {{ t.updated_at|fmt_dt }}{% endif %}</div>
+    </div>
+    <details>
+      <summary>Actions</summary>
+      <form method="post" action="{{ url_for('edit', todo_id=t.id, filter=filter_by) }}" class="inline">
+        <input type="text" name="title" value="{{ t.title }}" minlength="1" maxlength="200" required>
+        <button type="submit">Save</button>
+      </form>
+      <form method="post" action="{{ url_for('delete', todo_id=t.id, filter=filter_by) }}" class="inline">
+        <button class="danger" type="submit">Delete</button>
+      </form>
+    </details>
+  </article>
+{% else %}
+  <p class="muted">No tasks yet. Add your first one above!</p>
+{% endfor %}
+{% endblock %}

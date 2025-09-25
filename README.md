@@ -9,14 +9,19 @@ These are all sourced from [here](https://github.com/practical-tutorials/project
 ## Project Index
 
 - [**Web Applications**](./Web-Applications/)
-  - `MicroBlog` — Flask + Werkzeug + WTForms
+  - `MicroBlog` — Flask + Werkzeug + WTForms + HTML + CSS
+  - `WebBlog` - Django + HTML + CSS
+  - `TodoList` - Flask + RethinkDB + HTML + CSS
+  - `MicroServices` - Flask + Docker + React + SQLite + Nginx + Vite + HTML + CSS
 - [**Web Scraping**](./Web-Scraping/)
-  - `project-name` — one-line description
+  - `TwitterData` — Tweepy + Twitter API + + SQL + SQLite
+  - `WebsiteScrape` - Scrapy + MongoDB + Docker
+  - `SeleniumScrape` - Selenium
 - [**Data Science**](./Data-Science/)
-  - `project-name` — one-line description
-- [**Bots**](./bots/)
-  - `project-name` — one-line description
+  - 
+- [**Bots**](./Bots/)
+  - 
 - [**Machine Learning**](./Machine-Learning/)
-  - `project-name` — one-line description
-- [**Miscellaneous**](./miscellaneous/)
-  - `project-name` — one-line description
+  - 
+- [**Miscellaneous**](./Miscellaneous/)
+  - 

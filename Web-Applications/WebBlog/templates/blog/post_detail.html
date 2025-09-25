@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}{{ object.title }} · Django Blog{% endblock %}
+{% block content %}
+  <article class="post">
+    <h1>{{ object.title }}</h1>
+    <div class="meta">
+      <span>@{{ object.author.username }}</span> ·
+      <time datetime="{{ object.created_at|date:'c' }}">{{ object.created_at|date:'Y-m-d H:i' }}</time>
+    </div>
+    <div class="body">
+      <p style="white-space: pre-line">{{ object.body }}</p>
+    </div>
+
+    {% if user == object.author %}
+    <div class="actions">
+      <a href="{% url 'post-update' slug=object.slug %}">Edit</a>
+      <a href="{% url 'post-delete' slug=object.slug %}">Delete</a>
+    </div>
+    {% endif %}
+  </article>
+  <p><a href="{% url 'post-list' %}">← Back to list</a></p>
+{% endblock %}

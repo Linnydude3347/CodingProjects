@@ -1,0 +1,62 @@
+services:
+  users:
+    build: ./services/users
+    environment:
+      - FLASK_ENV=production
+      - DATABASE_URL=${USERS_DATABASE_URL:-sqlite:////data/users.db}
+    volumes:
+      - users_data:/data
+    expose:
+      - "5000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  tasks:
+    build: ./services/tasks
+    environment:
+      - FLASK_ENV=production
+      - DATABASE_URL=${TASKS_DATABASE_URL:-sqlite:////data/tasks.db}
+    volumes:
+      - tasks_data:/data
+    expose:
+      - "5000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  gateway:
+    build: ./gateway
+    environment:
+      - PORT=${GATEWAY_PORT:-8080}
+      - CORS_ORIGINS=${CORS_ORIGINS:-*}
+    depends_on:
+      - users
+      - tasks
+    ports:
+      - "${GATEWAY_PORT:-8080}:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build: ./frontend
+    depends_on:
+      - gateway
+    ports:
+      - "3000:80"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  users_data:
+  tasks_data:
