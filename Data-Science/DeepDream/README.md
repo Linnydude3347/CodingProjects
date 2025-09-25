@@ -4,7 +4,7 @@ A clean, configurable **DeepDream** implementation in **TensorFlow 2** using **I
 - **Tiled gradients** for high‑res images (avoids OOM and seam artifacts)
 - **Octaves** (multi‑scale) and **jitter**
 - Optional **total variation** smoothing
-- Simple **CLI** (`python -m deepdream.cli …`)
+- Simple **CLI** (`python -m deepdream.cli ...`)
 
 > Tip: Start with a moderate resolution (e.g., 1280px max side) and a `tile-size` ~256–512.
 

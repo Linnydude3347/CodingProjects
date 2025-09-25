@@ -24,8 +24,11 @@ These are all sourced from [here](https://github.com/practical-tutorials/project
   - `SentimentAnalysis` - Twitter Sentiment + Pandas + NLTK + MatPlotLib
   - `StockPrices` - YFinance + Pandas + Numpy + TA + Sklearn + MatPlotLib
 - [**Bots**](./Bots/)
-  - 
-- [**Machine Learning**](./Machine-Learning/)
-  - 
+  - `Facebook` - Flask + Docker
+  - `Reddit` - Praw + Docker + SQLite
+  - `Twitter` - Tweepy + Docker + SQLite
 - [**Miscellaneous**](./Miscellaneous/)
-  - 
+  - `Interpreter` - 
+  - `BlockChain` - 
+  - `GameOfLife` - 
+  - `TicTacToe` - 

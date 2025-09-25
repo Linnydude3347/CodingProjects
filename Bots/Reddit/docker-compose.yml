@@ -1,0 +1,8 @@
+services:
+  reddit-bot:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
