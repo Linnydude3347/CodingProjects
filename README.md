@@ -6,7 +6,7 @@ These are all sourced from [here](https://github.com/practical-tutorials/project
 
 ---
 
-## 🧭 Project Index (Fill as you add)
+## Project Index
 
 - [**Web Applications**](./Web-Applications/)
   - `MicroBlog` — Flask + Werkzeug + WTForms
