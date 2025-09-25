@@ -1,0 +1,26 @@
+:root { --bg:#0b0c10; --card:#121317; --text:#eaf0f1; --muted:#828b93; --accent:#6ea8fe; --danger:#e35d6a; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); }
+a { color: var(--accent); text-decoration: none; }
+.nav { display:flex; gap:1rem; align-items:center; padding: .75rem 1rem; background: #0f1116; border-bottom: 1px solid #1b1f2a; position: sticky; top: 0; }
+.brand { font-weight: 700; }
+.spacer { flex: 1; }
+.linklike { background:none; border:none; padding:0; color: var(--accent); cursor:pointer; font: inherit; }
+.container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+.flashes { display:flex; flex-direction:column; gap:.5rem; margin-bottom:1rem; }
+.flash { padding:.75rem 1rem; border-radius: .5rem; background: #1a1d26; border:1px solid #232836; }
+.flash.success { border-color: #1e5b2a; }
+.flash.info { border-color: #1e3a5b; }
+.flash.danger { border-color: #5b1e1e; }
+.card { background: var(--card); border:1px solid #1b1f2a; padding:1rem; border-radius: .75rem; display:flex; flex-direction:column; gap:.75rem; }
+label { display:flex; flex-direction:column; gap:.25rem; font-size:.9rem; color: var(--muted); }
+input, textarea, button { font: inherit; }
+input, textarea { background:#0d0f14; color: var(--text); border:1px solid #1b1f2a; border-radius:.5rem; padding:.5rem .6rem; }
+button, .button { background:#1e2637; color: var(--text); border:1px solid #2a3550; border-radius:.5rem; padding:.5rem .75rem; cursor:pointer; }
+button.danger { background:#3b2226; border-color:#5c2b33; }
+.post { background: var(--card); border:1px solid #1b1f2a; border-radius: .75rem; padding:1rem; margin-bottom:1rem; }
+.post header { display:flex; gap: .75rem; align-items: baseline; margin-bottom:.5rem; color: var(--muted); }
+.actions { display:flex; gap: .75rem; }
+.pagination { display:flex; gap:1rem; align-items:center; justify-content:center; margin-top:1.5rem; color: var(--muted); }
+.footer { text-align:center; color: var(--muted); padding: 3rem 0; }
+.error { color: var(--danger); font-size: .85rem; }

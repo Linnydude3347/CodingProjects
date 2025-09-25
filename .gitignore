@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.venv*/
+venv*/
+
+# Flask/instance-specific files
+instance/
+*.pid
+
+# SQLite databases
+*.sqlite3
+*.db
+*.db-*
+microblog.db
+microblog.db-journal
+
+# Logs
+*.log
+logs/
+app.log
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# Python packaging & caches
+build/
+dist/
+.eggs/
+*.egg-info/
+.pytest_cache/
+.cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Alembic migrations (if added later)
+migrations/

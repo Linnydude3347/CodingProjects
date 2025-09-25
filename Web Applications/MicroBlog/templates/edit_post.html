@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Edit Post · MicroBlog{% endblock %}
+{% block content %}
+  <h1>Edit Post</h1>
+  <form method="post" class="card">
+    {{ form.hidden_tag() }}
+    {{ form.body(rows=4, cols=60) }}
+    {% for e in form.body.errors %}<div class="error">{{ e }}</div>{% endfor %}
+    <div class="actions">{{ form.submit() }}</div>
+  </form>
+{% endblock %}

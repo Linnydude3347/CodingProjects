@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}@{{ user.username }} · MicroBlog{% endblock %}
+{% block content %}
+  <h1>@{{ user.username }}</h1>
+  {% for p in posts %}
+    <article class="post">
+      <header>
+        <a href="{{ url_for('profile', username=p.author.username) }}">@{{ p.author.username }}</a>
+        <time datetime="{{ p.created_at.isoformat() }}">{{ p.created_at.strftime('%Y-%m-%d %H:%M') }}</time>
+      </header>
+      <p>{{ p.body }}</p>
+      {% if current_user.is_authenticated and p.author == current_user %}
+        <div class="actions">
+          <a href="{{ url_for('edit_post', post_id=p.id) }}">Edit</a>
+          <form method="post" action="{{ url_for('delete_post', post_id=p.id) }}" style="display:inline">
+            <button type="submit" class="danger">Delete</button>
+          </form>
+        </div>
+      {% endif %}
+    </article>
+  {% else %}
+    <p>No posts yet.</p>
+  {% endfor %}
+
+  {% if pagination.pages > 1 %}
+    <nav class="pagination">
+      {% if pagination.has_prev %}
+        <a href="{{ url_for('profile', username=user.username, page=pagination.prev_num) }}">« Newer</a>
+      {% endif %}
+      <span>Page {{ pagination.page }} of {{ pagination.pages }}</span>
+      {% if pagination.has_next %}
+        <a href="{{ url_for('profile', username=user.username, page=pagination.next_num) }}">Older »</a>
+      {% endif %}
+    </nav>
+  {% endif %}
+{% endblock %}
