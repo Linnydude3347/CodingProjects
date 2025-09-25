@@ -27,8 +27,3 @@ These are all sourced from [here](https://github.com/practical-tutorials/project
   - `Facebook` - Flask + Docker
   - `Reddit` - Praw + Docker + SQLite
   - `Twitter` - Tweepy + Docker + SQLite
-- [**Miscellaneous**](./Miscellaneous/)
-  - `Interpreter` - 
-  - `BlockChain` - 
-  - `GameOfLife` - 
-  - `TicTacToe` - 
