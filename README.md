@@ -12,13 +12,17 @@ These are all sourced from [here](https://github.com/practical-tutorials/project
   - `MicroBlog` — Flask + Werkzeug + WTForms + HTML + CSS
   - `WebBlog` - Django + HTML + CSS
   - `TodoList` - Flask + RethinkDB + HTML + CSS
-  - `MicroServices` - Flask + Docker + React + SQLite + Nginx + Vite + HTML + CSS
+  - `MicroServices` - Flask + Docker + React + SQLite + Nginx + Vite
 - [**Web Scraping**](./Web-Scraping/)
-  - `TwitterData` — Tweepy + Twitter API + + SQL + SQLite
+  - `TwitterData` — Tweepy + Twitter API + SQL + SQLite
   - `WebsiteScrape` - Scrapy + MongoDB + Docker
   - `SeleniumScrape` - Selenium
 - [**Data Science**](./Data-Science/)
-  - 
+  - `DeepDream` - TensorFlow + Numpy + Pillow + MatPlotLib + DeepDream
+  - `GeneticAlgorithm` - Numpy + MatPlotLib + JobLib
+  - `Recommendation` - Sklearn + Scipy + Numpy + Pandas
+  - `SentimentAnalysis` - Twitter Sentiment + Pandas + NLTK + MatPlotLib
+  - `StockPrices` - YFinance + Pandas + Numpy + TA + Sklearn + MatPlotLib
 - [**Bots**](./Bots/)
   - 
 - [**Machine Learning**](./Machine-Learning/)

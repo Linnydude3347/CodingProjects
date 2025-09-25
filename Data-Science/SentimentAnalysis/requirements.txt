@@ -1,0 +1,10 @@
+tweepy>=4.14
+pandas>=2.2
+numpy>=1.26
+matplotlib>=3.8
+nltk>=3.9
+emoji>=2.12
+python-dotenv>=1.0
+# Optional (uncomment to use Transformer model for sentiment):
+# transformers>=4.44
+# torch>=2.3

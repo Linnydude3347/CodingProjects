@@ -1,0 +1,10 @@
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.4
+matplotlib>=3.8
+yfinance>=0.2.40
+ta>=0.11.0
+statsmodels>=0.14
+joblib>=1.4
+# Optional (uncomment if you want gradient boosting):
+# xgboost>=2.0
