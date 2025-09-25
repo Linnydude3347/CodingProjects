@@ -1,4 +1,4 @@
-# Python Projects — Personal Collection
+# Python Projects
 
 A curated set of Python projects I’ve built while learning, experimenting, and having fun. They’re organized by theme so you can jump straight to what interests you.
 
